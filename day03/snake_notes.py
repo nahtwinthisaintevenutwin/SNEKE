@@ -1,4 +1,4 @@
-import pygame, random
+import pygame
 
 # Initialize pygame
 pygame.init()
@@ -43,9 +43,9 @@ title_rect.center = (WINDOW_WIDTH // 2,
 
 # TODO: make a score_text object and assign a font render to it with text "Score: 0", antialias of True, color of GREEN, background color of DARKRED
 # TODO: make a score_rect object by assigning score_text.get_rect() to it.
-# TODO: place the topleft of score_rect to an x coordinate of 10 and y coordinate of 10
+# TODO: place the top left of score_rect to an x coordinate of 10 and y coordinate of 10
 
-# TODO: make a game_over_text object and assign a font render to it with text "GAMEOVER", antialias of True, color of RED, background color of DARKRED
+# TODO: make a game_over_text object and assign a font render to it with text "GAME OVER", antialias of True, color of RED, background color of DARKRED
 # TODO: make a game_over_rect object by assigning game_over_text.get_rect() to it.
 # TODO: place the center of game_over_rect to an x coordinate of half the WINDOW_WIDTH and y coordinate of half the WINDOW_HEIGHT
 
@@ -67,6 +67,7 @@ apple_rect = pygame.draw.rect(display_surface, RED, apple_coord)
 
 # The main game loop
 running = True
+is_paused = False
 while running:
     # Check to see if the user wants to quit
     for event in pygame.event.get():
